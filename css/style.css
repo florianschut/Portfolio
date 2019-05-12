@@ -8,12 +8,19 @@ body {
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 15em;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
 }
 
 header {
+    margin: -15em;
+    margin-bottom: 0px;
+    position: static;
     background-color: #3d3d3d;
 }
 
@@ -37,21 +44,21 @@ h2 {
 
 h3 {
     margin: 0;
-    margin-left: 4em;
-    margin-right: 4em;
-    padding-left: 1.5em;
     font-size: 4em;
     color: white;
 }
 
 p {
-    margin-left: 9em;
-    margin-right: 9em;
+    margin-left: 2em;
+    margin-right: 2em;
     font-size: 3em;
     color: white;
 }
 
 nav {
+    margin-left: -15em;
+    margin-right: -15em;
+    /*Counters the margin set in body*/
     display: flex;
     justify-content: space-evenly;
     padding: 15px;
@@ -69,6 +76,7 @@ nav a:active {
     color: white;
     text-decoration: none;
     text-align: center;
+    vertical-align: middle;
     font-size: 3em;
     line-height: 15px;
     flex-grow: 2;
