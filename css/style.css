@@ -100,7 +100,7 @@ nav a:active {
 }
 
 .navigation-button.socials i {
-    //line-height: inherit;
+    line-height: inherit;
 }
 
 .anchor {

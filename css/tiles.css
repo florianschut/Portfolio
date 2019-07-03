@@ -11,8 +11,8 @@ tile {
     width: 433px;
     height: 500px;
     margin: 1em;
-    border-radius: 15px;
     background-color: #454545;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 tile h1 {
@@ -54,4 +54,24 @@ tile hr {
     margin-bottom: -0.25em;
     background-color: #2e2e2e;
     border: none;
+}
+
+tile button{
+    border-color:  #454545;
+    background-color: #454545;
+    box-shadow: 0px, 0px;
+}
+
+tile a i ,
+tile button a:visited i,
+tile button a:active i{
+    margin: 15px;
+    display: inline-block;
+    color: white;
+    background-color: #454545;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 7em;
+  
 }
