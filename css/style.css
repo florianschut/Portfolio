@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
@@ -9,7 +8,7 @@ body {
 }
 
 body {
-    margin: 50em;
+    margin: 25em;
 }
 
 .flex {
@@ -18,12 +17,11 @@ body {
 }
 
 header {
-    margin: -50em;
+    margin: -25em;
     margin-bottom: 0px;
     position: static;
-    background-color: #3d3d3d;
+    background-color: rgb(250, 250, 250);
     z-index: 1;
-
 }
 
 h1 {
@@ -31,7 +29,7 @@ h1 {
     margin-top: 40px;
     padding: 0px;
     text-align: center;
-    color: white;
+    color: #3d3d3d;
     font-size: 8em;
     line-height: 15px;
 }
@@ -41,64 +39,58 @@ h2 {
     padding-top: 10px;
     padding-bottom: 5px;
     text-align: center;
-    color: white;
+    color: #3d3d3d;
     font-size: 3em;
     line-height: 15px;
 }
 
 h3 {
     margin: 0;
-
     padding-top: 1000px;
     margin-top: 1000px;
-
     font-size: 4em;
     color: white;
     z-index: 1;
 }
 
 p {
-    margin-left: 2em;
-    margin-right: 2em;
     font-size: 3em;
     color: white;
 }
 
 nav {
-    margin-left: -50em;
-    margin-right: -50em;
+    margin-left: -25em;
+    margin-right: -25em;
     padding: 15px;
     padding-left: 20em;
     padding-right: 2em;
     z-index: 1;
-
     display: flex;
-    justify-content: space-evenly;
-    background-color: #3d3d3d;
+    justify-content: space-between;
+    background-color: rgb(250, 250, 250);
     position: sticky;
     position: -webkit-sticky;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #3d3d3d;
+    box-shadow: 0px 5px 5px rgba(244, 244, 244, 0);
     top: 0px;
 }
 
-competencies-container{
+competencies-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: white;
+    justify-content: space-between;
     padding-top: 10em;
     padding-bottom: 25px;
-    padding-left: 50em;
-    padding-right: 50em;
+    padding-left: 25em;
+    padding-right: 25em;
     margin-top: -10em;
-    margin-left: -50em;
-    margin-right: -50em;
+    margin-left: -25em;
+    margin-right: -25em;
     margin-block: 10px;
     z-index: 0.25;
 }
 
-competencies-container img
-{
+competencies-container img {
     display: inline-block;
     height: 100px;
     width: 100px;
@@ -107,11 +99,9 @@ competencies-container img
     margin-bottom: 1rem;
 }
 
-nav a,
-nav a:visited,
-nav a:active {
+nav a, nav a:visited, nav a:active {
     display: inline-block;
-    color: white;
+    color: #3d3d3d;
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
@@ -128,7 +118,7 @@ nav a:active {
 }
 
 .navigation-button.socials a {
-    color: white;
+    color: #3d3d3d;
     font-size: 4.5em;
     text-decoration: none;
     margin-left: 1rem;
@@ -144,4 +134,11 @@ nav a:active {
 .anchor {
     padding-top: 7rem;
     margin-top: -3rem;
+}
+
+white-section {
+    background-color: rgb(250, 250, 250);
+    margin: 10em -25em -25em -25em;
+    padding: 0em 25em 25em 25em;
+    clip-path: polygon(100% 7%, 0% 0%, 0% 100%, 100% 100%)
 }

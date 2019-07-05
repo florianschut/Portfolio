@@ -1,16 +1,16 @@
 tile-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-left: 4em;
-    margin-right: 4em;
+    justify-content: space-between;
+   
 }
 
 tile {
     display: flex-box;
     width: 433px;
     height: 530px;
-    margin: 1em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
     background-color: #454545;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
