@@ -48,8 +48,13 @@ h2 {
 
 h3 {
     margin: 0;
+
+    padding-top: 1000px;
+    margin-top: 1000px;
+
     font-size: 4em;
     color: white;
+    z-index: 1;
 }
 
 p {
@@ -79,16 +84,29 @@ nav {
 competencies-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    background-color: white;
+    padding-top: 10em;
+    padding-bottom: 25px;
+    padding-left: 50em;
+    padding-right: 50em;
+    margin-top: -10em;
+    margin-left: -50em;
+    margin-right: -50em;
+    margin-block: 10px;
+    z-index: 0.25;
 }
 
-Competency
+competencies-container img
 {
     display: inline-block;
-    font-size: 10em;
-    font-weight: bold;
-    color: white;
+    height: 100px;
+    width: 100px;
+    flex-basis: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
+
 nav a,
 nav a:visited,
 nav a:active {
@@ -124,6 +142,6 @@ nav a:active {
 }
 
 .anchor {
-    padding-top: 5rem;
-    margin-top: -4rem;
+    padding-top: 7rem;
+    margin-top: -3rem;
 }
