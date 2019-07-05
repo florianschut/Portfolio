@@ -9,7 +9,7 @@ body {
 }
 
 body {
-    margin: 15em;
+    margin: 50em;
 }
 
 .flex {
@@ -18,15 +18,18 @@ body {
 }
 
 header {
-    margin: -15em;
+    margin: -50em;
     margin-bottom: 0px;
     position: static;
     background-color: #3d3d3d;
+    z-index: 1;
+
 }
 
 h1 {
-    margin: 0;
-    padding: 20px;
+    margin: 20px;
+    margin-top: 40px;
+    padding: 0px;
     text-align: center;
     color: white;
     font-size: 8em;
@@ -34,8 +37,9 @@ h1 {
 }
 
 h2 {
-    margin: 0;
-    padding: 5px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     text-align: center;
     color: white;
     font-size: 3em;
@@ -56,12 +60,15 @@ p {
 }
 
 nav {
-    margin-left: -15em;
-    margin-right: -15em;
-    /*Counters the margin set in body*/
+    margin-left: -50em;
+    margin-right: -50em;
+    padding: 15px;
+    padding-left: 20em;
+    padding-right: 2em;
+    z-index: 1;
+
     display: flex;
     justify-content: space-evenly;
-    padding: 15px;
     background-color: #3d3d3d;
     position: sticky;
     position: -webkit-sticky;
@@ -69,6 +76,19 @@ nav {
     top: 0px;
 }
 
+competencies-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+Competency
+{
+    display: inline-block;
+    font-size: 10em;
+    font-weight: bold;
+    color: white;
+}
 nav a,
 nav a:visited,
 nav a:active {
@@ -84,8 +104,8 @@ nav a:active {
 }
 
 .navigation-button.socials {
-    flex-grow: 2;
-    flex-basis: 0;
+    flex-grow: 0;
+    flex-basis: auto;
     text-align: end;
 }
 
