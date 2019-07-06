@@ -86,7 +86,6 @@ competencies-container {
     margin-top: -10em;
     margin-left: -25em;
     margin-right: -25em;
-    margin-block: 10px;
     z-index: 0.25;
 }
 
@@ -94,7 +93,7 @@ competencies-container img {
     display: inline-block;
     height: 100px;
     width: 100px;
-    flex-basis: 0;
+    flex-basis: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
