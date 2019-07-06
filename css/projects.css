@@ -1,19 +1,20 @@
 body {
-    margin: 50em;
+    margin: 0;
 }
 
 header {
-    margin: -50em;
+    margin: 0em;
     margin-bottom: 0px;
 
 }
 nav {
-    margin-left: -50em;
-    margin-right: -50em;
+    margin-left: 0%;
+    margin-right: 0%;
 
 }
 
 about-section{
+    margin: 1.01rem 10%;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -56,7 +57,41 @@ trailer .embed {
     border: 0;
 }
 
+@media (max-width: 1312px) {
+    about-desc {
+        width: 100%;
+    }
+
+    trailer {
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+}
+
 white-section {
-    margin: 10em -50em -50em -50em;
-    padding: 0em 50em 50em 50em;
+    margin: 10em 0em 0em 0em;
+    padding: 0em 10% 10% 10%;
+}
+
+competencies-container {
+    margin-left: 0;
+    margin-right: 0; 
+    padding-left: 0;
+    padding-right: 0;
+}
+
+about-desc ul hr{
+    height: 2px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.15rem;
+    margin-left: 0em;
+    margin-right: 2.44rem;
+   
+    background-color: rgba(221, 221, 221, 0.5);
+    
+    border: none;
+}
+
+ul ul hr{
+    background-color: rgba(221, 221, 221, 0.3);
 }
