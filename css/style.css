@@ -46,8 +46,8 @@ h2 {
 
 h3 {
     margin: 0;
-    padding-top: 1000px;
-    margin-top: 1000px;
+    padding-top: 7rem;
+    margin-top: -3rem;
     font-size: 4em;
     color: white;
     z-index: 1;
@@ -142,3 +142,4 @@ white-section {
     padding: 0em 25em 25em 25em;
     clip-path: polygon(100% 7%, 0% 0%, 0% 100%, 100% 100%)
 }
+
