@@ -86,7 +86,6 @@ competencies-container {
     margin-top: -10em;
     margin-left: -25em;
     margin-right: -25em;
-    z-index: 0.25;
 }
 
 competency{
@@ -187,7 +186,7 @@ button-container button a:active i{
 white-section {
     background-color: rgb(250, 250, 250);
     margin: 10em -25em -25em -25em;
-    padding: 0em 25em 25em 25em;
-    clip-path: polygon(100% 7%, 0% 0%, 0% 100%, 100% 100%)
+    padding: 0em 25em 25em 25em;    
+    clip-path: polygon(100% 5rem, 0% 0%, 0% 100%, 100% 100%)
 }
 

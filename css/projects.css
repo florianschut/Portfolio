@@ -95,3 +95,23 @@ about-desc ul hr{
 ul ul hr{
     background-color: rgba(221, 221, 221, 0.3);
 }
+
+media-box{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-top: 12em;
+padding-bottom: 25px;
+padding-left: 25em;
+padding-right: 25em;
+margin-top: -10em;
+margin-left: -25em;
+margin-right: -25em;
+z-index: 0.25;
+}
+media-box img{
+    flex-grow: 1;
+    width: 55rem;
+    margin: 2.2rem;
+    flex-basis: 0; 
+}
