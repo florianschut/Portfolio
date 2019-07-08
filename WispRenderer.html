@@ -26,7 +26,7 @@
             <a href="index.html#projects">Projects</a>
             <a href="index.html#competencies">Competencies</a>
             <a href="index.html#about">About me</a>
-            <a href="temp.html">CV</a>
+            <a href="resources/CV.pdf">CV</a>
             <div class="navigation-button socials">
                 <a href="https://www.linkedin.com/in/florian-schut-b979a373/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/florianschut"><i class="fab fa-github-square"></i></a>
@@ -35,8 +35,13 @@
         </nav>
         <about-section>
             <about-desc>
-                <h3>Summary</h3>
-
+                <h3>Wisp - Realtime Raytracing</h3>
+                <button-container>
+                    <a href="https://github.com/TeamWisp" title="Project GitHub Page"><i
+                            class="fab fa-github-square"></i></a>
+                    <a href="https://twitter.com/WispRenderer"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://discord.gg/qYBHq85"><i class="fab fa-discord"></i></a>
+                </button-container>
                 <p style="margin-top: 0rem; margin-bottom: 0rem;"><i>A real time hybrid raytraced rendering plugin
                         replacing the Autodesk Maya viewport leveraging the
                         power of DirectX Raytracing</i>
@@ -89,14 +94,59 @@
         <white-section>
             <h3 style="color:#3d3d3d ">Tools used</h3>
             <competencies-container>
-                <img src="resources/images/competencies/C++.png" alt="C++" />
-                <img src="resources/images/competencies/DX12.png" alt="DirectX 12" />
-                <img src="resources/images/competencies/DXR.png" alt="DirectX Raytracing" />
-                <img src="resources/images/competencies/HLSL.png" alt="HLSL" />
-                <img src="resources/images/competencies/VisualStudio.png" alt="VisualStudio" />
-                <img src="resources/images/competencies/Git.png" alt="Git" />
-                <img src="resources/images/competencies/ImGui.png" alt="Dear ImGui" />
-                <img src="resources/images/competencies/Jira.png" alt="Jira" />
+                <competency>
+                    <div>
+                        <p>C++</p>
+                    </div>
+                    <img src="resources/images/competencies/C++.png" alt="C++" />
+                </competency>
+
+                <competency>
+                    <div>
+                        <p>DirectX 12</p>
+                    </div>
+                    <img src="resources/images/competencies/DX12.png" alt="DirectX 12" />
+                </competency>
+
+                <competency>
+                    <div>
+                        <p>DirectX Raytracing</p>
+                    </div>
+                    <img src="resources/images/competencies/DXR.png" alt="DirectX Raytracing" />
+                </competency>
+
+                <competency>
+                    <div>
+                        <p>HLSL</p>
+                    </div>
+                    <img src="resources/images/competencies/HLSL.png" alt="HLSL" />
+                </competency>
+
+                <competency>
+                    <div>
+                        <p>Microsoft Visual Studio</p>
+                    </div>
+                    <img src="resources/images/competencies/VisualStudio.png" alt="VisualStudio" />
+                </competency>
+
+                <competency>
+                    <div>
+                        <p>Git</p>
+                    </div>
+                    <img src="resources/images/competencies/Git.png" alt="Git" />
+                </competency>
+                <competency>
+                    <div>
+                        <p>Dear ImGui</p>
+                    </div>
+                    <img src="resources/images/competencies/ImGui.png" alt="Dear ImGui" />
+                </competency>
+                <competency>
+                    <div>
+                        <p>Jira</p>
+                    </div>
+                    <img src="resources/images/competencies/Jira.png" alt="Jira" />
+                </competency>
             </competencies-container>
 
             <h3 style="color:#3d3d3d ">My Contribution</h3>
@@ -108,7 +158,8 @@
                 also worked on some general engine maintenance to improve the quality of life during future development.
                 Later on I started working on implementing Raytraced Ambient Occlusion during which my understanding of
                 both DirectX 12 increased significantly. In the final stages of the project I've implemented crash
-                logging and switched back and forth between iterating on the Ambient Occlusion render task and creating an
+                logging and switched back and forth between iterating on the Ambient Occlusion render task and creating
+                an
                 editor for the graphics settings to tweak the render tasks during run time. </p>
         </white-section>
     </div>

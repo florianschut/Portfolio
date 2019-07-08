@@ -89,14 +89,44 @@ competencies-container {
     z-index: 0.25;
 }
 
-competencies-container img {
-    display: inline-block;
+competency{
+    position: relative;
     height: 100px;
     width: 100px;
     flex-basis: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+competency img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.24s ease;
+
+}
+
+competency div{
+position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+competency p{
+    display:inline-block;
+    text-align: center;
+    opacity: 0;
+    transition: 0.24s ease;
+
+    color: #3d3d3d;
+}
+competency:hover p {    opacity: 1; }
+competency:hover img {  opacity: 0; }
 
 nav a, nav a:visited, nav a:active {
     display: inline-block;
@@ -132,6 +162,26 @@ nav a, nav a:visited, nav a:active {
 .anchor {
     padding-top: 7rem;
     margin-top: -3rem;
+}
+
+button-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button-container a i ,
+button-container button a:visited i,
+button-container button a:active i{
+    margin: 15px;
+    display: inline-block;
+    color: white;
+    background-color: inherit;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 7em;
+  
 }
 
 white-section {
