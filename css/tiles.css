@@ -11,6 +11,8 @@ tile {
     height: 530px;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     background-color: #454545;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -67,4 +69,18 @@ tile ul hr{
 }
 tile ul ul hr{
     background-color: rgba(221, 221, 221, 0.3);
+}
+
+@media(max-width: 1821px) {
+    tile-container {
+        justify-content: space-around;
+       
+    }
+}
+
+@media(max-width: 400px) {
+    tile h1 {
+        padding: 0.6em;
+        font-size: 3.9em;
+    }
 }

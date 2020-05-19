@@ -66,7 +66,8 @@ nav {
     padding-right: 2em;
     z-index: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: rgb(250, 250, 250);
     position: sticky;
     position: -webkit-sticky;
@@ -78,7 +79,7 @@ nav {
 competencies-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 12em;
     padding-bottom: 25px;
     padding-left: 25em;
@@ -136,21 +137,20 @@ nav a, nav a:visited, nav a:active {
     font-size: 3em;
     line-height: 15px;
     flex-grow: 2;
-    flex-basis: 0;
+    flex-basis: 125px;
     padding: 1rem;
 }
 
 .navigation-button.socials {
     flex-grow: 0;
-    flex-basis: auto;
-    text-align: end;
+    flex-basis: 150px;
+    text-align: center;
 }
 
 .navigation-button.socials a {
     color: #3d3d3d;
     font-size: 4.5em;
     text-decoration: none;
-    margin-left: 1rem;
     line-height: 15px;
 }
 
@@ -190,3 +190,73 @@ white-section {
     clip-path: polygon(100% 5rem, 0% 0%, 0% 100%, 100% 100%)
 }
 
+@media(max-width: 2071px) {
+    body {
+        margin: 5em;
+    }
+
+    header {
+        margin: -5em;
+        margin-bottom: 0px;
+    }
+
+    nav {
+        padding-left: 5em;
+        padding-right: 2em;
+        margin-left: -5em;
+        margin-right: -5em;
+    }
+    
+    competencies-container {
+       
+        padding-left: 5em;
+        padding-right: 5em;
+        margin-left: -5em;
+        margin-right: -5em;
+    }
+
+}
+
+@media(max-width: 680px) {
+    /*Nav bar too tight*/
+}
+
+@media(max-width: 400px) { /*small phonelike screen*/
+    body {
+        margin: 1em;
+    }
+
+    header {
+        margin: -1em;
+        margin-bottom: 0px;
+    }
+
+    nav {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: -1em;
+        margin-right: -1em;
+    }
+    
+    competencies-container {
+       
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: -1em;
+        margin-right: -1em;
+    }
+
+    white-section {
+        margin: 1em -1em -5em -1em;
+        padding: 0em 1em 5em 1em;    
+        clip-path: polygon(100% 2rem, 0% 0%, 0% 100%, 100% 100%)
+    }
+}
+
+@media(max-width: 400px) {
+    h1 {
+        margin: 15px;
+        margin-top: 20px;
+        font-size: 6.5em;
+    }
+}
