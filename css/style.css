@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-    margin: 25em;
+    margin: 25em 25em 5em 25em;
 }
 
 .flex {
@@ -94,6 +94,7 @@ competency{
     height: 100px;
     width: 100px;
     flex-basis: auto;
+    margin: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -127,11 +128,14 @@ competency p{
 }
 competency:hover p {    opacity: 1; }
 competency:hover img {  opacity: 0; }
+a
+{
+    text-decoration: none;
+}
 
 nav a, nav a:visited, nav a:active {
     display: inline-block;
     color: #3d3d3d;
-    text-decoration: none;
     text-align: center;
     vertical-align: middle;
     font-size: 3em;
@@ -185,12 +189,12 @@ button-container button a:active i{
 
 white-section {
     background-color: rgb(250, 250, 250);
-    margin: 10em -25em -25em -25em;
-    padding: 0em 25em 25em 25em;    
+    margin: 10em -25em -5em -25em;
+    padding: 0em 25em 5em 25em;    
     clip-path: polygon(100% 5rem, 0% 0%, 0% 100%, 100% 100%)
 }
 
-@media(max-width: 2071px) {
+@media(max-width: 2071px) { /* This is larger than 1080p*/
     body {
         margin: 5em;
     }
@@ -214,16 +218,26 @@ white-section {
         margin-left: -5em;
         margin-right: -5em;
     }
+    white-section {
+        margin: 10em -5em -5em -5em;
+        padding: 0em 5em 5em 5em; 
+    }
 
 }
 
 @media(max-width: 680px) {
-    /*Nav bar too tight*/
+    /*Nav bar too tight?*/
 }
 
 @media(max-width: 400px) { /*small phonelike screen*/
     body {
         margin: 1em;
+    }
+
+    h1 {
+        margin: 15px;
+        margin-top: 20px;
+        font-size: 6.5em;
     }
 
     header {
@@ -232,12 +246,14 @@ white-section {
     }
 
     nav {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding: 0.5em 1em 0em 1em;
         margin-left: -1em;
         margin-right: -1em;
     }
-    
+    nav a, nav a:visited, nav a:active {   
+        line-height: 7px;
+    }
+
     competencies-container {
        
         padding-left: 1em;
@@ -250,13 +266,5 @@ white-section {
         margin: 1em -1em -5em -1em;
         padding: 0em 1em 5em 1em;    
         clip-path: polygon(100% 2rem, 0% 0%, 0% 100%, 100% 100%)
-    }
-}
-
-@media(max-width: 400px) {
-    h1 {
-        margin: 15px;
-        margin-top: 20px;
-        font-size: 6.5em;
     }
 }
