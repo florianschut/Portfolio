@@ -58,6 +58,10 @@ p {
     color: white;
 }
 
+p a {
+    color: inherit;
+}
+
 nav {
     margin-left: -25em;
     margin-right: -25em;
@@ -128,14 +132,11 @@ competency p{
 }
 competency:hover p {    opacity: 1; }
 competency:hover img {  opacity: 0; }
-a
-{
-    text-decoration: none;
-}
 
 nav a, nav a:visited, nav a:active {
     display: inline-block;
     color: #3d3d3d;
+    text-decoration: none;
     text-align: center;
     vertical-align: middle;
     font-size: 3em;
