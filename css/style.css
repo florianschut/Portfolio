@@ -146,6 +146,10 @@ nav a, nav a:visited, nav a:active {
     padding: 1rem;
 }
 
+header a {
+    text-decoration: none;
+}
+
 .navigation-button.socials {
     flex-grow: 0;
     flex-basis: 150px;
