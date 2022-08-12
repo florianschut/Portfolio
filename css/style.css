@@ -199,6 +199,10 @@ white-section {
     clip-path: polygon(100% 5rem, 0% 0%, 0% 100%, 100% 100%)
 }
 
+white-section p, white-section h3{
+    color:#3d3d3d;
+}
+
 @media(max-width: 2071px) { /* This is larger than 1080p*/
     body {
         margin: 5em;

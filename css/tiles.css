@@ -50,6 +50,10 @@ tile ul {
     font-size: 2.5em;
     color: white;
 }
+tile ul ul {
+    font-size: 1em; 
+    margin-left: 0;
+}
 
 tile hr {
     height: 2px;
