@@ -2,8 +2,9 @@ class ProjectTile extends React.Component {
     buildLinks(){
         var retval = [];
         for (const link of this.props.links) {
-            retval.push(<a href={link}><i className="fas fa-info-circle"></i></a>);
+            retval.push(<a href={link}title="More Info..."><i className="fas fa-info-circle"></i></a>);
         }
+        return retval;
     }
 
     render(){
@@ -17,8 +18,7 @@ class ProjectTile extends React.Component {
                 <ul>{this.props.list}</ul>
                 <hr />
                 <button-container>
-                
-                    <a href="../Cradle.html" title="More Info..."><i className="fas fa-info-circle"></i></a>
+                {this.buildLinks()}
                 </button-container>
 
                 </div>
@@ -50,7 +50,7 @@ class Projects extends React.Component {
                             <hr />
                         </ul>
                     </li></div>}
-                    links={["../Cradle.html", "../Cradle.html"]}
+                    links={["../Cradle.html"]}
 
                     />
                 <div className="tile">

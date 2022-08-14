@@ -29,7 +29,7 @@ var ProjectTile = function (_React$Component) {
 
                     retval.push(React.createElement(
                         "a",
-                        { href: link },
+                        { href: link, title: "More Info..." },
                         React.createElement("i", { className: "fas fa-info-circle" })
                     ));
                 }
@@ -47,6 +47,8 @@ var ProjectTile = function (_React$Component) {
                     }
                 }
             }
+
+            return retval;
         }
     }, {
         key: "render",
@@ -83,11 +85,7 @@ var ProjectTile = function (_React$Component) {
                 React.createElement(
                     "button-container",
                     null,
-                    React.createElement(
-                        "a",
-                        { href: "../Cradle.html", title: "More Info..." },
-                        React.createElement("i", { className: "fas fa-info-circle" })
-                    )
+                    this.buildLinks()
                 )
             );
         }
@@ -162,7 +160,7 @@ var Projects = function (_React$Component2) {
                             )
                         )
                     ),
-                    links: ["../Cradle.html", "../Cradle.html"]
+                    links: ["../Cradle.html"]
 
                 }),
                 React.createElement(
