@@ -1,10 +1,46 @@
 class ProjectTile extends React.Component {
     buildLinks(){
-        var retval = [];
-        for (const link of this.props.links) {
-            retval.push(<a href={link}title="More Info..."><i className="fas fa-info-circle"></i></a>);
+        let retval = new Array;
+        if(this.props.githubLink){
+            retval.push(<a href={this.props.infoLink}title="Project GitHub Page"><i className="fab fa-github-square"></i></a>);
         }
-        return retval;
+        if(this.props.twitterLink){
+            retval.push(<a href={this.props.infoLink}title="Project Twitter Page"><i className="fab fa-twitter-square"></i></a>);
+        }
+        if(this.props.discordLink){
+            retval.push(<a href={this.props.infoLink}title="Project Discord Server"><i className="fab fa-discord"></i></a>);
+        }
+        if(this.props.itchLink){
+            retval.push(<a href={this.props.infoLink}title="Itch.io"><i className="fab fa-itch-io"></i></a>);
+        }
+        if(this.props.ggjLink){
+            retval.push(<a href={this.props.infoLink}title="Global Game Jame Website"><i className="fas fa-pager"></i></a>);
+        }
+        retval.push(<a href={this.props.pageHref}title="More Info..."><i className="fas fa-info-circle"></i></a>);
+        return <button-container>{retval}</button-container>;
+    }
+    buildList(aList)
+    {
+        let retval = new Array;
+        for (const listItem of aList)
+        {
+            if(Array.isArray(listItem))
+            {
+                let sublist= new Array;
+                retval.push(<li>{listItem[0]}</li>,<hr/>);
+                listItem.shift();
+                for (const subListItem of listItem)
+                {
+                    sublist.push(<li>{subListItem}</li>, <hr/>);
+                };
+                retval.push(<ul>{sublist}</ul>);
+            } else
+            {
+                retval.push(<li>{listItem}</li>, <hr/>);
+            }
+        };
+    
+        return(<ul>{retval}</ul>);
     }
 
     render(){
@@ -15,19 +51,15 @@ class ProjectTile extends React.Component {
                 <a href={this.props.pageHref}>
                 <h1>{this.props.projectName}</h1></a>
                 <p>{this.props.desc}</p>
-                <ul>{this.props.list}</ul>
+                {this.buildList(this.props.list)}
                 <hr />
-                <button-container>
                 {this.buildLinks()}
-                </button-container>
-
-                </div>
+            </div>
         )
     }
 }
 
 class Projects extends React.Component {
-    cradleLinks = ["../Cradle.html", "../Cradle.html"];
     render(){
         return(
             <div className="tile-container">
@@ -36,166 +68,44 @@ class Projects extends React.Component {
                     pageHref="../Cradle.html"
                     bannerSrc="../resources/images/CradleHeader.png"
                     desc="Internship at Cradle Research working on virtual productions and virtual humans"
-                    list= {<div><li>Full time professional work placement</li>
-                    <hr />
-                    <li>Durration: 9 Months</li>
-                    <hr />
-                    <li>
-                        Projects:
-                        <hr />
-                        <ul>
-                            <li>Real time virtual productions</li>
-                            <hr />
-                            <li>Virtual Humans in Breda Economy</li>
-                            <hr />
-                        </ul>
-                    </li></div>}
-                    links={["../Cradle.html"]}
-
-                    />
-                <div className="tile">
-                    <a href="WeekendRaytracer.html"><img src="../resources/images/RaytracerHeader.png"
-                            alt="A pathtracing research project" /></a>
-                    <a href="WeekendRaytracer.html">
-                        <h1>Weekend Raytracer
-                        </h1>
-                    </a>
-                    <p>
-                        An educational project exploring CPU pathtracing
-                    </p>
-                    <ul>
-                        <li>Solo Research Project</li>
-                        <hr />
-                        <li>Part-Time</li>
-                        <hr />
-                        <li>Features
-
-                            <hr />
-                            <ul>
-                                <li>Accumulating Path Tracer</li>
-                                <hr />
-                                <li>Multithreaded Rrendering</li>
-                                <hr />
-                                <li>Model Loading</li>
-                                <hr />
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr />
-                    <button-container>
-                        <a href="https://github.com/florianschut/RaytracingInAWeekend" title="Project GitHub Page"><i
-                                className="fab fa-github-square"></i></a>
-                        <a href="WeekendRaytracer.html" title="More Info..."><i className="fas fa-info-circle"></i></a>
-                    </button-container>
-
-                </div>
-                <div className="tile">
-                    <a href="../WispRenderer.html"><img src="../resources/images/WispDragonHeader.png"
-                            alt="Wisp renderer. A real time raytracing plugin for Autodesk Maya" /></a>
-                    <a href="../WispRenderer.html">
-                        <h1>Wisp Renderer</h1>
-                    </a>
-                    <p>
-                        A real time raytracing plugin for Autodesk Maya
-                    </p>
-                    <ul>
-                        <li>Role: Graphics Programmer</li>
-                        <hr />
-                        <li>Project Length: 32 Weeks</li>
-                        <hr />
-                        <li>Team members: 9</li>
-                        <hr />
-                        <li>Responsibilities
-                            <hr />
-                            <ul>
-                                <li>Raytraced Ambient Occlusion</li>
-                                <hr />
-                                <li>Graphics Settings</li>
-                                <hr />
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr />
-                    <button-container>
-                        <a href="https://github.com/TeamWisp" title="Project GitHub Page"><i
-                                className="fab fa-github-square"></i></a>
-                        <a href="https://twitter.com/WispRenderer" title="Project Twitter Page"><i
-                                className="fab fa-twitter-square"></i></a>
-                        <a href="https://discord.gg/qYBHq85" title="Project Discord Server"><i
-                                className="fab fa-discord"></i></a>
-                        <a href="../WispRenderer.html" title="More Info..."><i className="fas fa-info-circle"></i></a>
-                    </button-container>
-
-                </div>
-
-                <div className="tile">
-                    <a href="../Madoi.html"><img src="../resources/images/MahdoiHeader.png"
-                            alt="MAHDOI. A 2D platformer game made using custom tech for PSVita and Windows 10" /></a>
-                    <a href="../Madoi.html">
-                        <h1>Ma ĐÓI</h1>
-                    </a>
-                    <p>
-                        A cross platform 2D platformer game made using a custom engine for PSVita & Windows 10
-    </p>
-                    <ul>
-                        <li>Role: PSVita Graphics Programmer</li>
-                        <hr />
-                        <li>Project Length: 16 Weeks</li>
-                        <hr />
-                        <li>Team members: 17</li>
-                        <hr />
-                        <li>Responsibilities
-                            <hr />
-                            <ul>
-                                <li>PlayStation Vita rendering</li>
-                                <hr />
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr />
-                    <button-container>
-                        <a href="https://igad.itch.io/ma-doi" title="Itch.io"><i className="fab fa-itch-io"></i></a>
-                        <a href="../Madoi.html" title="More Info..."><i className="fas fa-info-circle"></i></a>
-                    </button-container>
-                </div>
-
-                <div className="tile">
-                    <a href="../Flux.html"><img src="../resources/images/FluxHeader.png"
-                            alt="Flux. A Physics based party game made during GGJ 2018" /></a>
-                    <a href="../Flux.html">
-                        <h1>Flux</h1>
-                    </a>
-                    <p>
-                        A Physics based party game made for GGJ 2018
-                        </p>
-                    <ul>
-                        <li>Role: Gameplay Programmer</li>
-                        <hr />
-                        <li>Project Length: 48 Hours</li>
-                        <hr />
-                        <li>Team members: 18</li>
-                        <hr />
-                        <li>Responsibilities</li>
-                        <hr />
-                        <ul >
-                            <li>Character movement</li>
-                            <hr />
-                            <li>Generalist tasks</li>
-                            <hr />
-                        </ul>
-                    </ul>
-
-                    <hr />
-                    <button-container>
-                        <a href="https://github.com/TeamHowdini/GlobalGameJam2018_V2" title="Project GitHub Page"><i
-                                className="fab fa-github-square"></i></a>
-                        <a href="https://igad.itch.io/flux" title="Itch.io"><i
-                                className="fab fa-itch-io"></i></a>
-                        <a href="https://globalgamejam.org/2018/games/f-l-u-x" title="Global Game Jame Website"><i
-                                className="fas fa-pager"></i></a>
-                        <a href="../Flux.html" title="More Info..."><i className="fas fa-info-circle"></i></a>
-                    </button-container>
-                </div>
+                    list= {["Full time professional work placement", "Durration: 9 Months", ["Projects:", "Real time virtual productions", "Virtual Humans in Breda Economy"]]}
+                />
+                <ProjectTile
+                    projectName="Weekend Raytracer"
+                    pageHref="WeekendRaytracer.html"
+                    bannerSrc="../resources/images/RaytracerHeader.png"
+                    desc="An educational project exploring CPU pathtracing "
+                    list = {["Solo Research Project","Part-Time", ["Features:", "Accumulating Path Tracer", "Multithreaded Rendering", "Model Loading" ] ]}
+                    githubLink="https://github.com/florianschut/RaytracingInAWeekend"
+                />
+                <ProjectTile
+                    projectName="Wisp Renderer"
+                    pageHref="WispRenderer.html"
+                    bannerSrc="../resources/images/WispDragonHeader.png"
+                    desc="A real time raytracing plugin for Autodesk Maya "
+                    list = {["Role: Graphics Programmer","Project Length: 32 Weeks","Team members: 9", ["Responsibilities:", "Raytraced Ambient Occlusion", "Graphics Settings"] ]}
+                    githubLink="https://github.com/TeamWisp"
+                    twitterLink="https://twitter.com/WispRenderer"
+                    discordLink="https://discord.gg/qYBHq85"
+                />
+                <ProjectTile
+                    projectName="MA ĐÓI"
+                    pageHref="Madoi.html"
+                    bannerSrc="../resources/images/MahdoiHeader.png"
+                    desc="A cross platform 2D platformer game made using a custom engine for PSVita & Windows 10"
+                    list = {["Role: PSVita Graphics Programmer","Project Length: 16 Weeks","Team members: 17", ["Responsibilities:", "PlayStation Vita rendering"] ]}
+                    itchLink="https://igad.itch.io/ma-doi"
+                />
+                <ProjectTile
+                    projectName="Flux"
+                    pageHref="Flux.html"
+                    bannerSrc="../resources/images/FluxHeader.png"
+                    desc="A Physics based party game made for GGJ 2018"
+                    list = {["Role: Gameplay Programmer","Project Length: 48 Hours","Team members: 18", ["Responsibilities:", "Character movement", "Generalist tasks"] ]}
+                    githubLink="https://github.com/TeamHowdini/GlobalGameJam2018_V2"
+                    itchLink="https://igad.itch.io/ma-doi"
+                    ggjLink="https://globalgamejam.org/2018/games/f-l-u-x"
+                />
             </div>
         )
     }

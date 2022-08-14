@@ -18,20 +18,115 @@ var ProjectTile = function (_React$Component) {
     _createClass(ProjectTile, [{
         key: "buildLinks",
         value: function buildLinks() {
-            var retval = [];
+            var retval = new Array();
+            if (this.props.githubLink) {
+                retval.push(React.createElement(
+                    "a",
+                    { href: this.props.infoLink, title: "Project GitHub Page" },
+                    React.createElement("i", { className: "fab fa-github-square" })
+                ));
+            }
+            if (this.props.twitterLink) {
+                retval.push(React.createElement(
+                    "a",
+                    { href: this.props.infoLink, title: "Project Twitter Page" },
+                    React.createElement("i", { className: "fab fa-twitter-square" })
+                ));
+            }
+            if (this.props.discordLink) {
+                retval.push(React.createElement(
+                    "a",
+                    { href: this.props.infoLink, title: "Project Discord Server" },
+                    React.createElement("i", { className: "fab fa-discord" })
+                ));
+            }
+            if (this.props.itchLink) {
+                retval.push(React.createElement(
+                    "a",
+                    { href: this.props.infoLink, title: "Itch.io" },
+                    React.createElement("i", { className: "fab fa-itch-io" })
+                ));
+            }
+            if (this.props.ggjLink) {
+                retval.push(React.createElement(
+                    "a",
+                    { href: this.props.infoLink, title: "Global Game Jame Website" },
+                    React.createElement("i", { className: "fas fa-pager" })
+                ));
+            }
+            retval.push(React.createElement(
+                "a",
+                { href: this.props.pageHref, title: "More Info..." },
+                React.createElement("i", { className: "fas fa-info-circle" })
+            ));
+            return React.createElement(
+                "button-container",
+                null,
+                retval
+            );
+        }
+    }, {
+        key: "buildList",
+        value: function buildList(aList) {
+            var retval = new Array();
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
             var _iteratorError = undefined;
 
             try {
-                for (var _iterator = this.props.links[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                    var link = _step.value;
+                for (var _iterator = aList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var listItem = _step.value;
 
-                    retval.push(React.createElement(
-                        "a",
-                        { href: link, title: "More Info..." },
-                        React.createElement("i", { className: "fas fa-info-circle" })
-                    ));
+                    if (Array.isArray(listItem)) {
+                        var sublist = new Array();
+                        retval.push(React.createElement(
+                            "li",
+                            null,
+                            listItem[0]
+                        ), React.createElement("hr", null));
+                        listItem.shift();
+                        var _iteratorNormalCompletion2 = true;
+                        var _didIteratorError2 = false;
+                        var _iteratorError2 = undefined;
+
+                        try {
+                            for (var _iterator2 = listItem[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                                var subListItem = _step2.value;
+
+                                sublist.push(React.createElement(
+                                    "li",
+                                    null,
+                                    subListItem
+                                ), React.createElement("hr", null));
+                            }
+                        } catch (err) {
+                            _didIteratorError2 = true;
+                            _iteratorError2 = err;
+                        } finally {
+                            try {
+                                if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                                    _iterator2.return();
+                                }
+                            } finally {
+                                if (_didIteratorError2) {
+                                    throw _iteratorError2;
+                                }
+                            }
+                        }
+
+                        ;
+                        retval.push(React.createElement(
+                            "ul",
+                            null,
+                            sublist
+                        ));
+                    } else {
+                        retval.push(React.createElement(
+                            "li",
+                            null,
+                            listItem
+                        ), React.createElement("hr", null));
+                    }
                 }
             } catch (err) {
                 _didIteratorError = true;
@@ -48,7 +143,13 @@ var ProjectTile = function (_React$Component) {
                 }
             }
 
-            return retval;
+            ;
+
+            return React.createElement(
+                "ul",
+                null,
+                retval
+            );
         }
     }, {
         key: "render",
@@ -76,17 +177,9 @@ var ProjectTile = function (_React$Component) {
                     null,
                     this.props.desc
                 ),
-                React.createElement(
-                    "ul",
-                    null,
-                    this.props.list
-                ),
+                this.buildList(this.props.list),
                 React.createElement("hr", null),
-                React.createElement(
-                    "button-container",
-                    null,
-                    this.buildLinks()
-                )
+                this.buildLinks()
             );
         }
     }]);
@@ -98,17 +191,9 @@ var Projects = function (_React$Component2) {
     _inherits(Projects, _React$Component2);
 
     function Projects() {
-        var _ref;
-
-        var _temp, _this2, _ret;
-
         _classCallCheck(this, Projects);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this2 = _possibleConstructorReturn(this, (_ref = Projects.__proto__ || Object.getPrototypeOf(Projects)).call.apply(_ref, [this].concat(args))), _this2), _this2.cradleLinks = ["../Cradle.html", "../Cradle.html"], _temp), _possibleConstructorReturn(_this2, _ret);
+        return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).apply(this, arguments));
     }
 
     _createClass(Projects, [{
@@ -122,400 +207,44 @@ var Projects = function (_React$Component2) {
                     pageHref: "../Cradle.html",
                     bannerSrc: "../resources/images/CradleHeader.png",
                     desc: "Internship at Cradle Research working on virtual productions and virtual humans",
-                    list: React.createElement(
-                        "div",
-                        null,
-                        React.createElement(
-                            "li",
-                            null,
-                            "Full time professional work placement"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Durration: 9 Months"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Projects:",
-                            React.createElement("hr", null),
-                            React.createElement(
-                                "ul",
-                                null,
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Real time virtual productions"
-                                ),
-                                React.createElement("hr", null),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Virtual Humans in Breda Economy"
-                                ),
-                                React.createElement("hr", null)
-                            )
-                        )
-                    ),
-                    links: ["../Cradle.html"]
-
+                    list: ["Full time professional work placement", "Durration: 9 Months", ["Projects:", "Real time virtual productions", "Virtual Humans in Breda Economy"]]
                 }),
-                React.createElement(
-                    "div",
-                    { className: "tile" },
-                    React.createElement(
-                        "a",
-                        { href: "WeekendRaytracer.html" },
-                        React.createElement("img", { src: "../resources/images/RaytracerHeader.png",
-                            alt: "A pathtracing research project" })
-                    ),
-                    React.createElement(
-                        "a",
-                        { href: "WeekendRaytracer.html" },
-                        React.createElement(
-                            "h1",
-                            null,
-                            "Weekend Raytracer"
-                        )
-                    ),
-                    React.createElement(
-                        "p",
-                        null,
-                        "An educational project exploring CPU pathtracing"
-                    ),
-                    React.createElement(
-                        "ul",
-                        null,
-                        React.createElement(
-                            "li",
-                            null,
-                            "Solo Research Project"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Part-Time"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Features",
-                            React.createElement("hr", null),
-                            React.createElement(
-                                "ul",
-                                null,
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Accumulating Path Tracer"
-                                ),
-                                React.createElement("hr", null),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Multithreaded Rrendering"
-                                ),
-                                React.createElement("hr", null),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Model Loading"
-                                ),
-                                React.createElement("hr", null)
-                            )
-                        )
-                    ),
-                    React.createElement("hr", null),
-                    React.createElement(
-                        "button-container",
-                        null,
-                        React.createElement(
-                            "a",
-                            { href: "https://github.com/florianschut/RaytracingInAWeekend", title: "Project GitHub Page" },
-                            React.createElement("i", {
-                                className: "fab fa-github-square" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "WeekendRaytracer.html", title: "More Info..." },
-                            React.createElement("i", { className: "fas fa-info-circle" })
-                        )
-                    )
-                ),
-                React.createElement(
-                    "div",
-                    { className: "tile" },
-                    React.createElement(
-                        "a",
-                        { href: "../WispRenderer.html" },
-                        React.createElement("img", { src: "../resources/images/WispDragonHeader.png",
-                            alt: "Wisp renderer. A real time raytracing plugin for Autodesk Maya" })
-                    ),
-                    React.createElement(
-                        "a",
-                        { href: "../WispRenderer.html" },
-                        React.createElement(
-                            "h1",
-                            null,
-                            "Wisp Renderer"
-                        )
-                    ),
-                    React.createElement(
-                        "p",
-                        null,
-                        "A real time raytracing plugin for Autodesk Maya"
-                    ),
-                    React.createElement(
-                        "ul",
-                        null,
-                        React.createElement(
-                            "li",
-                            null,
-                            "Role: Graphics Programmer"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Project Length: 32 Weeks"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Team members: 9"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Responsibilities",
-                            React.createElement("hr", null),
-                            React.createElement(
-                                "ul",
-                                null,
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Raytraced Ambient Occlusion"
-                                ),
-                                React.createElement("hr", null),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "Graphics Settings"
-                                ),
-                                React.createElement("hr", null)
-                            )
-                        )
-                    ),
-                    React.createElement("hr", null),
-                    React.createElement(
-                        "button-container",
-                        null,
-                        React.createElement(
-                            "a",
-                            { href: "https://github.com/TeamWisp", title: "Project GitHub Page" },
-                            React.createElement("i", {
-                                className: "fab fa-github-square" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "https://twitter.com/WispRenderer", title: "Project Twitter Page" },
-                            React.createElement("i", {
-                                className: "fab fa-twitter-square" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "https://discord.gg/qYBHq85", title: "Project Discord Server" },
-                            React.createElement("i", {
-                                className: "fab fa-discord" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "../WispRenderer.html", title: "More Info..." },
-                            React.createElement("i", { className: "fas fa-info-circle" })
-                        )
-                    )
-                ),
-                React.createElement(
-                    "div",
-                    { className: "tile" },
-                    React.createElement(
-                        "a",
-                        { href: "../Madoi.html" },
-                        React.createElement("img", { src: "../resources/images/MahdoiHeader.png",
-                            alt: "MAHDOI. A 2D platformer game made using custom tech for PSVita and Windows 10" })
-                    ),
-                    React.createElement(
-                        "a",
-                        { href: "../Madoi.html" },
-                        React.createElement(
-                            "h1",
-                            null,
-                            "Ma \u0110\xD3I"
-                        )
-                    ),
-                    React.createElement(
-                        "p",
-                        null,
-                        "A cross platform 2D platformer game made using a custom engine for PSVita & Windows 10"
-                    ),
-                    React.createElement(
-                        "ul",
-                        null,
-                        React.createElement(
-                            "li",
-                            null,
-                            "Role: PSVita Graphics Programmer"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Project Length: 16 Weeks"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Team members: 17"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Responsibilities",
-                            React.createElement("hr", null),
-                            React.createElement(
-                                "ul",
-                                null,
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    "PlayStation Vita rendering"
-                                ),
-                                React.createElement("hr", null)
-                            )
-                        )
-                    ),
-                    React.createElement("hr", null),
-                    React.createElement(
-                        "button-container",
-                        null,
-                        React.createElement(
-                            "a",
-                            { href: "https://igad.itch.io/ma-doi", title: "Itch.io" },
-                            React.createElement("i", { className: "fab fa-itch-io" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "../Madoi.html", title: "More Info..." },
-                            React.createElement("i", { className: "fas fa-info-circle" })
-                        )
-                    )
-                ),
-                React.createElement(
-                    "div",
-                    { className: "tile" },
-                    React.createElement(
-                        "a",
-                        { href: "../Flux.html" },
-                        React.createElement("img", { src: "../resources/images/FluxHeader.png",
-                            alt: "Flux. A Physics based party game made during GGJ 2018" })
-                    ),
-                    React.createElement(
-                        "a",
-                        { href: "../Flux.html" },
-                        React.createElement(
-                            "h1",
-                            null,
-                            "Flux"
-                        )
-                    ),
-                    React.createElement(
-                        "p",
-                        null,
-                        "A Physics based party game made for GGJ 2018"
-                    ),
-                    React.createElement(
-                        "ul",
-                        null,
-                        React.createElement(
-                            "li",
-                            null,
-                            "Role: Gameplay Programmer"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Project Length: 48 Hours"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Team members: 18"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "li",
-                            null,
-                            "Responsibilities"
-                        ),
-                        React.createElement("hr", null),
-                        React.createElement(
-                            "ul",
-                            null,
-                            React.createElement(
-                                "li",
-                                null,
-                                "Character movement"
-                            ),
-                            React.createElement("hr", null),
-                            React.createElement(
-                                "li",
-                                null,
-                                "Generalist tasks"
-                            ),
-                            React.createElement("hr", null)
-                        )
-                    ),
-                    React.createElement("hr", null),
-                    React.createElement(
-                        "button-container",
-                        null,
-                        React.createElement(
-                            "a",
-                            { href: "https://github.com/TeamHowdini/GlobalGameJam2018_V2", title: "Project GitHub Page" },
-                            React.createElement("i", {
-                                className: "fab fa-github-square" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "https://igad.itch.io/flux", title: "Itch.io" },
-                            React.createElement("i", {
-                                className: "fab fa-itch-io" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "https://globalgamejam.org/2018/games/f-l-u-x", title: "Global Game Jame Website" },
-                            React.createElement("i", {
-                                className: "fas fa-pager" })
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "../Flux.html", title: "More Info..." },
-                            React.createElement("i", { className: "fas fa-info-circle" })
-                        )
-                    )
-                )
+                React.createElement(ProjectTile, {
+                    projectName: "Weekend Raytracer",
+                    pageHref: "WeekendRaytracer.html",
+                    bannerSrc: "../resources/images/RaytracerHeader.png",
+                    desc: "An educational project exploring CPU pathtracing ",
+                    list: ["Solo Research Project", "Part-Time", ["Features:", "Accumulating Path Tracer", "Multithreaded Rendering", "Model Loading"]],
+                    githubLink: "https://github.com/florianschut/RaytracingInAWeekend"
+                }),
+                React.createElement(ProjectTile, {
+                    projectName: "Wisp Renderer",
+                    pageHref: "WispRenderer.html",
+                    bannerSrc: "../resources/images/WispDragonHeader.png",
+                    desc: "A real time raytracing plugin for Autodesk Maya ",
+                    list: ["Role: Graphics Programmer", "Project Length: 32 Weeks", "Team members: 9", ["Responsibilities:", "Raytraced Ambient Occlusion", "Graphics Settings"]],
+                    githubLink: "https://github.com/TeamWisp",
+                    twitterLink: "https://twitter.com/WispRenderer",
+                    discordLink: "https://discord.gg/qYBHq85"
+                }),
+                React.createElement(ProjectTile, {
+                    projectName: "MA \u0110\xD3I",
+                    pageHref: "Madoi.html",
+                    bannerSrc: "../resources/images/MahdoiHeader.png",
+                    desc: "A cross platform 2D platformer game made using a custom engine for PSVita & Windows 10",
+                    list: ["Role: PSVita Graphics Programmer", "Project Length: 16 Weeks", "Team members: 17", ["Responsibilities:", "PlayStation Vita rendering"]],
+                    itchLink: "https://igad.itch.io/ma-doi"
+                }),
+                React.createElement(ProjectTile, {
+                    projectName: "Flux",
+                    pageHref: "Flux.html",
+                    bannerSrc: "../resources/images/FluxHeader.png",
+                    desc: "A Physics based party game made for GGJ 2018",
+                    list: ["Role: Gameplay Programmer", "Project Length: 48 Hours", "Team members: 18", ["Responsibilities:", "Character movement", "Generalist tasks"]],
+                    githubLink: "https://github.com/TeamHowdini/GlobalGameJam2018_V2",
+                    itchLink: "https://igad.itch.io/ma-doi",
+                    ggjLink: "https://globalgamejam.org/2018/games/f-l-u-x"
+                })
             );
         }
     }]);
