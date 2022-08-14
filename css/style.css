@@ -203,7 +203,7 @@ white-section p, white-section h3{
     color:#3d3d3d;
 }
 
-@media(max-width: 2071px) { /* This is larger than 1080p*/
+@media(max-width: 2512px) { /* This is larger than 1080p*/
     body {
         margin: 5em;
     }
@@ -238,7 +238,7 @@ white-section p, white-section h3{
     /*Nav bar too tight?*/
 }
 
-@media(max-width: 400px) { /*small phonelike screen*/
+@media(max-width: 500px) { /*small phonelike screen*/
     body {
         margin: 1em;
     }
