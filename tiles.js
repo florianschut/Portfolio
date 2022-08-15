@@ -127,7 +127,7 @@ var ProjectTile = function (_React$Component) {
                             "li",
                             { key: id++ },
                             listItem
-                        ), React.createElement("hr", null));
+                        ), React.createElement("hr", { key: id++ }));
                     }
                 }
             } catch (err) {

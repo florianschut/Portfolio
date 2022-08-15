@@ -38,7 +38,7 @@ class ProjectTile extends React.Component {
                 retval.push(<ul key={id++}>{sublist}</ul>);
             } else
             {
-                retval.push(<li key={id++}>{listItem}</li>, <hr/>);
+                retval.push(<li key={id++}>{listItem}</li>, <hr key={id++}/>);
             }
         };
     
