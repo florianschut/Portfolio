@@ -1,30 +1,34 @@
+<!DOCTYPE html>
 <html>
 
-    <head>
-        <html lang="en-US">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Florian Schut">
-        <meta name="image" property="og:image" content="https://www.florianschut.com/resources/images/RaytracerHeader.png">
-        <meta name="description" property="og:description" content="Programming Graduate's Portfolio.s">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/projects.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <title>
-            Florian Schut &middot; Portfolio
-        </title>
-        <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <html lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Florian Schut">
+    <meta name="image" property="og:image" content="https://www.florianschut.com/resources/images/RaytracerHeader.png">
+    <meta name="description" property="og:description" content="Programming Graduate's Portfolio.s">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>
+        Florian Schut &middot; Portfolio
+    </title>
+    <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
 
 <body>
     <div class="flex">
         <header>
             <a href="index.html">
-            <h1> Florian Schut </h1>
-            <h2> Programming Graduate </h2>
-        </a>
+                <h1> Florian Schut </h1>
+                <h2> Programming Graduate </h2>
+            </a>
         </header>
 
         <nav>
@@ -51,10 +55,12 @@
                 <ul>
 
                     <li>
-                        <b>Role:</b> PSVita Graphics Programmer</li>
+                        <b>Role:</b> PSVita Graphics Programmer
+                    </li>
                     <hr />
                     <li>
-                        <b>Project Length:</b> 16 Weeks</li>
+                        <b>Project Length:</b> 16 Weeks
+                    </li>
                     <hr />
                     <li>
                         <b> Period:</b> February 2018 - July 2018
@@ -85,38 +91,7 @@
         </about-section>
         <white-section>
             <h3>Tools used</h3>
-            <competencies-container>
-                <competency>
-                    <div>
-                        <p>C++</p>
-                    </div>
-                    <img src="resources/images/competencies/Cpp.png" alt="C++" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>PlayStation Vita Dev Tools</p>
-                    </div>
-                    <img src="resources/images/competencies/PSVita.png" alt="Playstation Vita" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Microsoft Visual Studio</p>
-                    </div>
-                    <img src="resources/images/competencies/VisualStudio.png" alt="VisualStudio" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Perforce</p>
-                    </div>
-                    <img src="resources/images/competencies/P4.png" alt="Perforce" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Jira</p>
-                    </div>
-                    <img src="resources/images/competencies/Jira.png" alt="Jira" />
-                </competency>
-            </competencies-container>
+            <div id="madoi-competencies-container"></div>
 
             <h3>My Contribution</h3>
 
@@ -135,19 +110,20 @@
                 renderer made by teammates of mine. Even though I'm aware of the complexity of DirectX 12 compared to
                 the more straightforward Vita rendering, it still gives me a spark of pride that the Vita ended up
                 running with lower frame times than the DirectX 12 renderer on our dedicated graphics cards.
-                </p>
+            </p>
 
             <h3>Media</h3>
 
-                <media-box>
-                        <img src="resources/images/media-box/Madoi/825d29_092e27bacda54f0fae1384b7575612ee_mv2.png">
-                        <img src="resources/images/media-box/Madoi/825d29_2577f4682e2e4f98acebc97637a42c5f_mv2.jpg">
-                        <img src="resources/images/media-box/Madoi/825d29_79b2d7a11b724152877a57516f3e7d3a_mv2.jpg">
-                        <img src="resources/images/media-box/Madoi/825d29_cb91671d3d7443eab2bde002ad6f7ad3_mv2.png">
-                        <img src="resources/images/media-box/Madoi/825d29_fc079203fe6043378c13cd4c49dccc29_mv2.jpg">
-                </media-box>
+            <media-box>
+                <img src="resources/images/media-box/Madoi/825d29_092e27bacda54f0fae1384b7575612ee_mv2.png">
+                <img src="resources/images/media-box/Madoi/825d29_2577f4682e2e4f98acebc97637a42c5f_mv2.jpg">
+                <img src="resources/images/media-box/Madoi/825d29_79b2d7a11b724152877a57516f3e7d3a_mv2.jpg">
+                <img src="resources/images/media-box/Madoi/825d29_cb91671d3d7443eab2bde002ad6f7ad3_mv2.png">
+                <img src="resources/images/media-box/Madoi/825d29_fc079203fe6043378c13cd4c49dccc29_mv2.jpg">
+            </media-box>
         </white-section>
     </div>
+    <script type="module" src="competencies.min.js"></script>
 </body>
 
 </html>

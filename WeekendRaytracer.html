@@ -1,30 +1,34 @@
+<!DOCTYPE html>
 <html>
 
-    <head>
-        <html lang="en-US">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Florian Schut">
-        <meta name="image" property="og:image" content="https://www.florianschut.com/resources/images/RaytracerHeader.png">
-        <meta name="description" property="og:description" content="Programming Graduate's Portfolio.">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/projects.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <title>
-            Florian Schut &middot; Portfolio
-        </title>
-        <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <html lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Florian Schut">
+    <meta name="image" property="og:image" content="https://www.florianschut.com/resources/images/RaytracerHeader.png">
+    <meta name="description" property="og:description" content="Programming Graduate's Portfolio.">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>
+        Florian Schut &middot; Portfolio
+    </title>
+    <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
 
 <body>
     <div class="flex">
         <header>
             <a href="index.html">
-            <h1> Florian Schut </h1>
-            <h2> Programming Graduate </h2>
-        </a>
+                <h1> Florian Schut </h1>
+                <h2> Programming Graduate </h2>
+            </a>
         </header>
 
         <nav>
@@ -32,7 +36,7 @@
             <a href="index.html#competencies">Competencies</a>
             <a href="index.html#about">About me</a>
             <a href="CV.pdf">CV</a>
-            <div class="navigation-button socials" >
+            <div class="navigation-button socials">
                 <a href="https://www.linkedin.com/in/florian-schut-b979a373/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/florianschut"><i class="fab fa-github-square"></i></a>
                 <a href="mailto:mail@florianschut.nl"><i class="fas fa-envelope"></i></a>
@@ -45,8 +49,9 @@
                     <a href="https://github.com/florianschut/RaytracingInAWeekend" title="Project GitHub Page"><i
                             class="fab fa-github-square"></i></a>
                 </button-container>
-                <p style="margin-top: 0rem; margin-bottom: 0rem;"><i>A CPU pathtracer project to research and understand the 
-                    mechanics of a Ratracer without the assistance of DirectX Raytracing </i>
+                <p style="margin-top: 0rem; margin-bottom: 0rem;"><i>A CPU pathtracer project to research and understand
+                        the
+                        mechanics of a Ratracer without the assistance of DirectX Raytracing </i>
                 </p>
                 <ul>
                     <li>
@@ -74,65 +79,43 @@
                     </li>
                 </ul>
                 <p>
-                    A project initially started using the <a href = "https://raytracing.github.io/books/RayTracingInOneWeekend.html" title="Peter Shirley's raytracing in a weekend series"> Peter Shirley's raytracing in a weekend series</a>. 
+                    A project initially started using the <a
+                        href="https://raytracing.github.io/books/RayTracingInOneWeekend.html"
+                        title="Peter Shirley's raytracing in a weekend series"> Peter Shirley's raytracing in a weekend
+                        series</a>.
                     After which more features were added in an order based on intended learning oppurtunities.
                 </p>
             </about-desc>
             <trailer>
-                <img src="resources/images/RaytracerHeader.png"/>
-                
+                <img src="resources/images/RaytracerHeader.png" />
+
 
             </trailer>
         </about-section>
         <white-section>
             <h3>Tools used</h3>
-            <competencies-container>
-                <competency>
-                    <div>
-                        <p>C++</p>
-                    </div>
-                    <img src="resources/images/competencies/Cpp.png" alt="C++" />
-                </competency>
+            <div id="weekend-raytracer-competencies-container"></div>
 
-                <competency>
-                    <div>
-                        <p>Microsoft Visual Studio</p>
-                    </div>
-                    <img src="resources/images/competencies/VisualStudio.png" alt="VisualStudio" />
-                </competency>
-
-                <competency>
-                    <div>
-                        <p>Git</p>
-                    </div>
-                    <img src="resources/images/competencies/Git.png" alt="Git" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Dear ImGui</p>
-                    </div>
-                    <img src="resources/images/competencies/ImGui.png" alt="Dear ImGui" />
-                </competency>
-            </competencies-container>
-
-           <!-- <h3>My Contribution</h3>
+            <!-- <h3>My Contribution</h3>
 
             <p>
                 A project initially started using the Peter Shirley's raytracing in a weekend series.TODO: Add Link 
             After which more features were added in an order based on intended learning oppurtunities.</p>-->
-                
-                <h3>Media</h3>
-       
-                <media-box>
-                    <img src="resources/images/media-box/Raytracer/teapot.png"/>
-                    <img src="resources/images/media-box/Raytracer/irradiance.png"/>    
-                    <img src="resources/images/RaytracerHeader.png"/>
-                    <img src="resources/images/media-box/Raytracer/SphereCornel.png"/>
-                </media-box>
-                    <p>Models downloaded from Morgan McGuire's <a href="https://casual-effects.com/data">Computer Graphics Archive</a></p>
 
-            </white-section>
+            <h3>Media</h3>
+
+            <media-box>
+                <img src="resources/images/media-box/Raytracer/teapot.png" />
+                <img src="resources/images/media-box/Raytracer/irradiance.png" />
+                <img src="resources/images/RaytracerHeader.png" />
+                <img src="resources/images/media-box/Raytracer/SphereCornel.png" />
+            </media-box>
+            <p>Models downloaded from Morgan McGuire's <a href="https://casual-effects.com/data">Computer Graphics
+                    Archive</a></p>
+
+        </white-section>
     </div>
+    <script type="module" src="competencies.min.js"></script>
 </body>
 
 </html>

@@ -1,29 +1,33 @@
+<!DOCTYPE html>
 <html>
 
-    <head>
-        <html lang="en-US">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Florian Schut">
-        <meta name="image" property="og:image" content="https://www.florianschut.com/resources/images/RaytracerHeader.png">
-        <meta name="description" property="og:description" content="Programming Graduate's Portfolio.">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/projects.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <title>
-            Florian Schut &middot; Portfolio
-        </title>
-        <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <html lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Florian Schut">
+    <meta name="image" property="og:image" content="https://www.florianschut.com/resources/images/RaytracerHeader.png">
+    <meta name="description" property="og:description" content="Programming Graduate's Portfolio.">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>
+        Florian Schut &middot; Portfolio
+    </title>
+    <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
 
 <body>
     <div class="flex">
         <header>
             <a href="index.html">
-            <h1> Florian Schut </h1>
-            <h2> Programming Graduate </h2>
+                <h1> Florian Schut </h1>
+                <h2> Programming Graduate </h2>
             </a>
         </header>
 
@@ -53,10 +57,12 @@
                 </p>
                 <ul>
                     <li>
-                        <b>Role:</b> Gameplay Programmer</li>
+                        <b>Role:</b> Gameplay Programmer
+                    </li>
                     <hr />
                     <li>
-                        <b>Project Length:</b> 48 Hours</li>
+                        <b>Project Length:</b> 48 Hours
+                    </li>
                     <hr />
                     <li>
                         <b> Period:</b> January 26-28 2018
@@ -88,32 +94,7 @@
         </about-section>
         <white-section>
             <h3>Tools used</h3>
-            <competencies-container>
-                <competency>
-                    <div>
-                        <p>C++</p>
-                    </div>
-                    <img src="resources/images/competencies/Cpp.png" alt="C++" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Git</p>
-                    </div>
-                    <img src="resources/images/competencies/Git.png" alt="Git" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Microsoft Visual Studio</p>
-                    </div>
-                    <img src="resources/images/competencies/VisualStudio.png" alt="VisualStudio" />
-                </competency>
-                <competency>
-                    <div>
-                        <p>Unreal Engine 4</p>
-                    </div>
-                    <img src="resources/images/competencies/UE4.png" alt="Unreal Engine 4" />
-                </competency>
-            </competencies-container>
+            <div id="flux-competencies-container"></div>
 
             <h3>My Contribution</h3>
 
@@ -131,14 +112,15 @@
 
             <h3>Media</h3>
 
-                <media-box>
-                        <img src="resources/images/media-box/Flux/HighresScreenshot00003.png">
-                        <img src="resources/images/media-box/Flux/HighresScreenshot00004.png">
-                        <img src="resources/images/media-box/Flux/HighresScreenshot00005.png">
+            <media-box>
+                <img src="resources/images/media-box/Flux/HighresScreenshot00003.png">
+                <img src="resources/images/media-box/Flux/HighresScreenshot00004.png">
+                <img src="resources/images/media-box/Flux/HighresScreenshot00005.png">
 
-                </media-box>
+            </media-box>
         </white-section>
     </div>
+    <script type="module" src="competencies.min.js"></script>
 </body>
 
 </html>
