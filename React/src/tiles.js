@@ -1,42 +1,44 @@
 class ProjectTile extends React.Component {
     buildLinks(){
+        let id = 0;
         let retval = new Array;
         if(this.props.githubLink){
-            retval.push(<a href={this.props.infoLink}title="Project GitHub Page"><i className="fab fa-github-square"></i></a>);
+            retval.push(<a href={this.props.infoLink}title="Project GitHub Page" key={id++}><i className="fab fa-github-square"></i></a>);
         }
         if(this.props.twitterLink){
-            retval.push(<a href={this.props.infoLink}title="Project Twitter Page"><i className="fab fa-twitter-square"></i></a>);
+            retval.push(<a href={this.props.infoLink}title="Project Twitter Page" key={id++}><i className="fab fa-twitter-square"></i></a>);
         }
         if(this.props.discordLink){
-            retval.push(<a href={this.props.infoLink}title="Project Discord Server"><i className="fab fa-discord"></i></a>);
+            retval.push(<a href={this.props.infoLink}title="Project Discord Server" key={id++}><i className="fab fa-discord"></i></a>);
         }
         if(this.props.itchLink){
-            retval.push(<a href={this.props.infoLink}title="Itch.io"><i className="fab fa-itch-io"></i></a>);
+            retval.push(<a href={this.props.infoLink}title="Itch.io" key={id++}><i className="fab fa-itch-io"></i></a>);
         }
         if(this.props.ggjLink){
-            retval.push(<a href={this.props.infoLink}title="Global Game Jame Website"><i className="fas fa-pager"></i></a>);
+            retval.push(<a href={this.props.infoLink}title="Global Game Jame Website" key={id++}><i className="fas fa-pager"></i></a>);
         }
-        retval.push(<a href={this.props.pageHref}title="More Info..."><i className="fas fa-info-circle"></i></a>);
+        retval.push(<a href={this.props.pageHref}title="More Info..." key={id++}><i className="fas fa-info-circle"></i></a>);
         return <button-container>{retval}</button-container>;
     }
     buildList(aList)
     {
         let retval = new Array;
+        let id = 0;
         for (const listItem of aList)
         {
             if(Array.isArray(listItem))
             {
                 let sublist= new Array;
-                retval.push(<li>{listItem[0]}</li>,<hr/>);
+                retval.push(<li key={id++}>{listItem[0]}</li>,<hr key={id++}/>);
                 listItem.shift();
                 for (const subListItem of listItem)
                 {
-                    sublist.push(<li>{subListItem}</li>, <hr/>);
+                    sublist.push(<li key={id++}>{subListItem}</li>, <hr key={id++}/>);
                 };
-                retval.push(<ul>{sublist}</ul>);
+                retval.push(<ul key={id++}>{sublist}</ul>);
             } else
             {
-                retval.push(<li>{listItem}</li>, <hr/>);
+                retval.push(<li key={id++}>{listItem}</li>, <hr/>);
             }
         };
     

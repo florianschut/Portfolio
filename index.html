@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
     <html lang="en-US">
@@ -18,6 +17,8 @@
         Florian Schut &middot; Portfolio
     </title>
     <link rel="shortcut icon" type="image/png" href="resources/favicon.png">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,6 @@
             <h1> Florian Schut </h1>
             <h2> Programming Graduate </h2>
         </header>
-
         <nav>
             <a href="#projects">Projects</a>
             <a href="#competencies">Competencies</a>
@@ -39,183 +39,7 @@
             </div>
         </nav>
         <h3 class="anchor" id="projects">Projects</h3>
-        <ul class="tile-container">
-            <div class="tile">
-                <a href="Cradle.html"><img src="resources/images/CradleHeader.png"
-                        alt="9 month internship at a research group" /></a>
-                <a href="Cradle.html">
-                    <h1>Cradle Research
-                    </h1>
-                </a>
-                <p>
-                    Internship at Cradle Research working on virtual productions and virtual humans
-                <ul>
-                    <li>Full time professional work placement</li>
-                    <hr />
-                    <li>Durration: 9 Months</li>
-                    <hr />
-                    <li>Projects:
-                        <hr />
-                        <ul>
-                            <li>Real time virtual productions</li>
-                            <hr />
-                            <li>Virtual Humans in Breda Economy</li>
-                            <hr />
-                        </ul>
-                    </li>
-                </ul>
-                </p>
-                <hr />
-                <button-container>
-                    <a href="Cradle.html" title="More Info..."><i class="fas fa-info-circle"></i></a>
-                </button-container>
-
-            </div class="tile">
-            <div class="tile">
-                <a href="WeekendRaytracer.html"><img src="resources/images/RaytracerHeader.png"
-                        alt="A pathtracing research project" /></a>
-                <a href="WeekendRaytracer.html">
-                    <h1>Weekend Raytracer
-                    </h1>
-                </a>
-                <p>
-                    An educational project exploring CPU pathtracing
-                <ul>
-                    <li>Solo Research Project</li>
-                    <hr />
-                    <li>Part-Time</li>
-                    <hr />
-                    <li>Features
-
-                        <hr />
-                        <ul>
-                            <li>Accumulating Path Tracer</li>
-                            <hr />
-                            <li>Multithreaded Rrendering</li>
-                            <hr />
-                            <li>Model Loading</li>
-                            <hr />
-                        </ul>
-                    </li>
-                </ul>
-                </p>
-                <hr />
-                <button-container>
-                    <a href="https://github.com/florianschut/RaytracingInAWeekend" title="Project GitHub Page"><i
-                            class="fab fa-github-square"></i></a>
-                    <a href="WeekendRaytracer.html" title="More Info..."><i class="fas fa-info-circle"></i></a>
-                </button-container>
-
-            </div class="tile">
-            <div class="tile">
-                <a href="WispRenderer.html"><img src="resources/images/WispDragonHeader.png"
-                        alt="Wisp renderer. A real time raytracing plugin for Autodesk Maya" /></a>
-                <a href="WispRenderer.html">
-                    <h1>Wisp Renderer</h1>
-                </a>
-                <p>
-                    A real time raytracing plugin for Autodesk Maya
-                <ul>
-                    <li>Role: Graphics Programmer</li>
-                    <hr />
-                    <li>Project Length: 32 Weeks</li>
-                    <hr />
-                    <li>Team members: 9</li>
-                    <hr />
-                    <li>Responsibilities
-                        <hr />
-                        <ul>
-                            <li>Raytraced Ambient Occlusion</li>
-                            <hr />
-                            <li>Graphics Settings</li>
-                            <hr />
-                        </ul>
-                    </li>
-                </ul>
-                </p>
-                <hr />
-                <button-container>
-                    <a href="https://github.com/TeamWisp" title="Project GitHub Page"><i
-                            class="fab fa-github-square"></i></a>
-                    <a href="https://twitter.com/WispRenderer" title="Project Twitter Page"><i
-                            class="fab fa-twitter-square"></i></a>
-                    <a href="https://discord.gg/qYBHq85" title="Project Discord Server"><i
-                            class="fab fa-discord"></i></a>
-                    <a href="WispRenderer.html" title="More Info..."><i class="fas fa-info-circle"></i></a>
-                </button-container>
-
-            </div class="tile">
-
-            <div class="tile">
-                <a href="Madoi.html"><img src="resources/images/MahdoiHeader.png"
-                        alt="MAHDOI. A 2D platformer game made using custom tech for PSVita and Windows 10" /></a>
-                <a href="Madoi.html">
-                    <h1>MA &#x0110&OacuteI</h1>
-                </a>
-                <p>
-                    A cross platform 2D platformer game made using a custom engine for PSVita & Windows 10
-
-                <ul>
-                    <li>Role: PSVita Graphics Programmer</li>
-                    <hr />
-                    <li>Project Length: 16 Weeks</li>
-                    <hr />
-                    <li>Team members: 17</li>
-                    <hr />
-                    <li>Responsibilities
-                        <hr />
-                        <ul>
-                            <li>PlayStation Vita rendering</li>
-                            <hr />
-                        </ul>
-                    </li>
-                </ul>
-                </p>
-                <hr />
-                <button-container>
-                    <a href="https://igad.itch.io/ma-doi" title="Itch.io"><i class="fab fa-itch-io"></i></a>
-                    <a href="Madoi.html" title="More Info..."><i class="fas fa-info-circle"></i></a>
-                </button-container>
-            </div class="tile">
-
-            <div class="tile">
-                <a href="Flux.html"><img src="resources/images/FluxHeader.png"
-                        alt="Flux. A Physics based party game made during GGJ 2018" /></a>
-                <a href="Flux.html">
-                    <h1>Flux</h1>
-                </a>
-                <p>
-                    A Physics based party game made for GGJ 2018
-                <ul>
-                    <li>Role: Gameplay Programmer</li>
-                    <hr />
-                    <li>Project Length: 48 Hours</li>
-                    <hr />
-                    <li>Team members: 18</li>
-                    <hr />
-                    <li>Responsibilities</li>
-                    <hr />
-                    <ul >
-                        <li>Character movement</li>
-                        <hr />
-                        <li>Generalist tasks</li>
-                        <hr />
-                    </ul>
-                </ul>
-                </p>
-                <hr />
-                <button-container>
-                    <a href="https://github.com/TeamHowdini/GlobalGameJam2018_V2" title="Project GitHub Page"><i
-                            class="fab fa-github-square"></i></a>
-                    <a href="https://igad.itch.io/flux" title="Itch.io" title="Itch.io"><i
-                            class="fab fa-itch-io"></i></a>
-                    <a href="https://globalgamejam.org/2018/games/f-l-u-x" title="Global Game Jame Website"><i
-                            class="fas fa-pager"></i></a>
-                    <a href="Flux.html" title="More Info..."><i class="fas fa-info-circle"></i></a>
-                </button-container>
-            </div class="tile">
-        </ul>
-
+        <div id="project-tiles-container"></div>
         <white-section>
             <h3 class="anchor" id="competencies">Competencies</h3>
             <competencies-container>
@@ -348,5 +172,6 @@
             </div>
         </white-section>
     </div>
+    <script type="module" src="tiles.js"></script>
 </body>
 </html>
